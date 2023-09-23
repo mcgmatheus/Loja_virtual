@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <h1>Produtos</h1>
+  <h1 class="ma-5" style="color: #d32f2f">Produtos</h1>
 
   <div class="list-products">
     <v-card width="300px" class="pa-2 mb-2" v-for="product in produtosRestantes" :key="product.id">
@@ -24,7 +24,10 @@
       </v-card-subtitle>
 
       <v-card-actions>
-        <v-btn color="orange" @click="() => this.$store.dispatch('adicionarProduto', { product })">
+        <v-btn
+          color="red-darken-2"
+          @click="() => this.$store.dispatch('adicionarProduto', { product })"
+        >
           Comprar
         </v-btn>
       </v-card-actions>
