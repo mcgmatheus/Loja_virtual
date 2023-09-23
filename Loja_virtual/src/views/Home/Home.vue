@@ -15,7 +15,12 @@
         <v-card-title class="text-white">{{ product.nome }} </v-card-title>
       </v-img>
       <v-card-subtitle class="pt-4">
-        10X de
+        {{
+          new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(
+            product.preco
+          )
+        }}
+        ou até 10x de
         {{
           new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(
             product.parcela
