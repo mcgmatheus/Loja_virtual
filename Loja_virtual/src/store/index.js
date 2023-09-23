@@ -31,10 +31,6 @@ const store = createStore({
     }
   },
   actions: {
-    alterarNome(context, value) {
-      console.log(value.nome)
-      context.commit('alterarTeste', value.nome)
-    },
     adicionarProduto(context, value) {
       context.commit('adicionarProdutoAoCarrinho', value.product)
     }

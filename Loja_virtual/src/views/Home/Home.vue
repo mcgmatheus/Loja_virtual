@@ -45,7 +45,7 @@ export default {
     produtosRestantes() {
       return this.products.filter((product) => {
         const itemExiste = this.$store.state.produtosCarrinho.find((item) => item.id === product.id)
-        if (itemExiste) return false
+        if (itemExiste) return true
         return true
       })
     }
